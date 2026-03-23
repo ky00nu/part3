@@ -1,354 +1,243 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minjun Han - Product Designer</title>
-    <meta name="description" content="한민준 - Product Designer. LINE, 당근마켓, 삼성전자 출신. 디자인 시스템, UI/UX, 모션 디자인 전문.">
+    <title>Minjun Han | Product Designer</title>
+    <meta name="description" content="Minjun Han - Product Designer focusing on Systematic UI and User Experience.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <!-- GSAP for Animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-    <!-- Lenis for Smooth Scroll -->
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
 </head>
+<body class="lang-en">
+    <div id="noise"></div>
+    <div class="cursor-glow"></div>
 
-<body>
-
-    <!-- Header -->
-    <header>
-        <div class="logo">MINJUN HAN</div>
-        <nav>
-            <a href="#work">WORK</a>
-            <a href="#about">ABOUT</a>
-            <a href="#awards">AWARDS</a>
-            <a href="#contact">CONTACT</a>
-            <button class="theme-toggle" aria-label="Toggle Dark/Light Mode">◑</button>
-        </nav>
-    </header>
-
-    <!-- Hero Section: Kinetic Typography -->
-    <section class="hero">
-        <canvas class="particles-canvas" id="particleCanvas"></canvas>
-        <div class="hero-text-container">
-            <h1 class="hero-text">PRODUCT</h1>
-            <h1 class="hero-text outline">DESIGNER</h1>
-            <h1 class="hero-text">SYSTEM</h1>
-            <h1 class="hero-text outline">CRAFTER</h1>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">MINJUN.SYS</a>
+            <ul class="nav-links">
+                <li><a href="#experience"><span lang="en">Experience</span><span lang="ko">경력</span></a></li>
+                <li><a href="#works"><span lang="en">Selected Works</span><span lang="ko">주요 프로젝트</span></a></li>
+                <li><a href="#capabilities"><span lang="en">Capabilities</span><span lang="ko">보유 역량</span></a></li>
+                <li><a href="#contact"><span lang="en">Contact</span><span lang="ko">연락처</span></a></li>
+                <li><button id="langToggle" class="lang-toggle">EN</button></li>
+            </ul>
         </div>
-    </section>
+    </nav>
 
-    <!-- About Section: Bento Grid -->
-    <section class="content" id="about">
-        <h2 class="section-title">ABOUT</h2>
-        <div class="bento-grid about-grid">
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <p class="eyebrow fade-up delay-1">SYSTEMATIC. INTUITIVE. AESTHETIC.</p>
+                <h1 class="hero-title fade-up delay-2"><span lang="en">Minjun Han</span><span lang="ko">한민준</span><span class="accent">.</span></h1>
+                <p class="hero-desc fade-up delay-3">
+                    <span lang="en">Lead Product Designer focusing on Systematic UI and User Experience.<br>Crafting scalable design systems across global platforms like LINE and Danggeun.</span>
+                    <span lang="ko">체계적인 UI와 사용자 경험에 집중하는 리드 프로덕트 디자이너.<br>라인(LINE)과 당근마켓 등 글로벌 모바일 앱의 확장 가능한 디자인 시스템을 구축합니다.</span>
+                </p>
+                <div class="hero-cta fade-up delay-4">
+                    <a href="#works" class="btn btn-primary"><span lang="en">View Works</span><span lang="ko">프로젝트 보기</span></a>
+                    <a href="#contact" class="btn btn-secondary"><span lang="en">Get in touch</span><span lang="ko">연락하기</span></a>
+                </div>
+            </div>
+            <div class="scroll-indicator fade-up delay-5">
+                <span class="scroll-line"></span>
+            </div>
+        </section>
 
-            <!-- Profile Card -->
-            <div class="bento-box profile-card">
-                <h2>한민준</h2>
-                <p class="subtitle">Product Designer @LINE</p>
-                <p class="bio">모바일/웹 서비스 UI/UX 디자인, 디자인 시스템 구축, 프로토타이핑, 사용자 리서치, 모션 디자인 전문</p>
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="num">11+</span>
-                        <span class="label">YEARS</span>
+        <!-- 2. Experience Section -->
+        <section id="experience" class="experience section-padding">
+            <div class="container">
+                <h2 class="section-title fade-up"><span lang="en">Experience</span><span lang="ko">주요 경력</span><span class="accent">.</span></h2>
+                <div class="timeline">
+                    <!-- LINE -->
+                    <div class="timeline-item fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date"><span lang="en">2021 &mdash; Present</span><span lang="ko">2021 &mdash; 현재</span></div>
+                        <div class="timeline-content">
+                            <h3><span lang="en">LINE Corporation</span><span lang="ko">라인 (LINE)</span></h3>
+                            <h4><span lang="en">Product Designer (Lead)</span><span lang="ko">리드 프로덕트 디자이너</span></h4>
+                            <p><span lang="en">Global Messenger UX Redesign / Lead Design System 3.0 / VOOM Creator Studio</span><span lang="ko">글로벌 메신저 UX 리디자인 / 디자인 시스템 3.0 리드 / VOOM 크리에이터 스튜디오 디자인</span></p>
+                            <ul class="job-highlights">
+                                <li><span lang="en">Reduced message discovery time by 40%</span><span lang="ko">메시지 탐색 시간 40% 단축 및 효율화</span></li>
+                                <li><span lang="en">Systematized 240+ components with dark mode support</span><span lang="ko">240개 UI 컴포넌트 체계화 및 다크모드 전면 지원</span></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="num">240+</span>
-                        <span class="label">COMPONENTS</span>
+                    <!-- Danggeun -->
+                    <div class="timeline-item fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2018 &mdash; 2021</div>
+                        <div class="timeline-content">
+                            <h3><span lang="en">Danggeun (Karrot)</span><span lang="ko">당근마켓</span></h3>
+                            <h4><span lang="en">Product Designer</span><span lang="ko">프로덕트 디자이너</span></h4>
+                            <p><span lang="en">Chat Transaction Experience / Seed Design System / Neighborhood Feed Redesign</span><span lang="ko">당근 앱 채팅 거래 경험 개선 / '당근 씨앗' 디자인 시스템 초기 구축 / 동네생활 피드 리디자인</span></p>
+                            <ul class="job-highlights">
+                                <li><span lang="en">Contributed to 18% improvement in transaction success rate</span><span lang="ko">중고 거래 매칭 성공률 18% 향상에 기여</span></li>
+                                <li><span lang="en">Built the initial "Danggeun Seed" design system</span><span lang="ko">핵심 120개 컴포넌트 및 라이브러리 가이드라인 수립</span></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="num">8</span>
-                        <span class="label">AWARDS</span>
+                    <!-- Samsung -->
+                    <div class="timeline-item fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2015 &mdash; 2018</div>
+                        <div class="timeline-content">
+                            <h3><span lang="en">Samsung Electronics</span><span lang="ko">삼성전자 無선사업부</span></h3>
+                            <h4><span lang="en">UX Designer (Mobile)</span><span lang="ko">모바일 UX 디자이너</span></h4>
+                            <p><span lang="en">Galaxy S8 AOD / S7 Edge Panel / Samsung Pay UX</span><span lang="ko">갤럭시 S8 AOD 테마 / S7 엣지 패널 / 삼성페이 카드 등록 UX 개편</span></p>
+                            <ul class="job-highlights">
+                                <li><span lang="en">Won iF & Reddot design awards for mobile interfaces</span><span lang="ko">독창적인 플래그십 모바일 인터페이스 설계로 iF 및 Reddot 디자인 어워드 수상</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Studio Joh -->
+                    <div class="timeline-item fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2013 &mdash; 2015</div>
+                        <div class="timeline-content">
+                            <h3><span lang="en">Studio Joh</span><span lang="ko">스튜디오좋</span></h3>
+                            <h4><span lang="en">Junior Designer</span><span lang="ko">주니어 디자이너</span></h4>
+                            <p><span lang="en">Hyundai Card Music Library / Amorepacific Packages</span><span lang="ko">현대카드 뮤직 라이브러리 공간 그래픽 / 아모레퍼시픽 이니스프리 프리미엄 패키지</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Career Timeline -->
-            <div class="bento-box career-card">
-                <h3>경력</h3>
-                <ul class="career-list">
-                    <li><span class="year">2021 ~ 현재</span><span class="role">라인 Product Designer (Lead)</span></li>
-                    <li><span class="year">2018 ~ 2021</span><span class="role">당근마켓 Product Designer</span></li>
-                    <li><span class="year">2015 ~ 2018</span><span class="role">삼성전자 무선사업부 UX Designer</span></li>
-                    <li><span class="year">2013 ~ 2015</span><span class="role">스튜디오좋 주니어 디자이너</span></li>
-                    <li><span class="year">2009 ~ 2013</span><span class="role">국민대학교 시각디자인학과</span></li>
-                </ul>
-            </div>
-
-            <!-- Core Competencies -->
-            <div class="bento-box skills-card">
-                <h3>핵심 역량</h3>
-                <div class="skill-tags">
-                    <span>UI/UX 디자인</span>
-                    <span>디자인 시스템</span>
-                    <span>프로토타이핑</span>
-                    <span>사용자 리서치</span>
-                    <span>모션 디자인</span>
+        <!-- 3. Selected Works Section -->
+        <section id="works" class="works section-padding">
+            <div class="container">
+                <h2 class="section-title fade-up"><span lang="en">Selected Works</span><span lang="ko">주요 프로젝트</span><span class="accent">.</span></h2>
+                <div class="work-grid">
+                    <!-- Project 1 -->
+                    <div class="work-card fade-up">
+                        <img class="work-img" src="images/design_01.jpg" alt="LINE Design System">
+                        <div class="work-info">
+                            <span class="work-tag"><span lang="en">Design System</span><span lang="ko">디자인 시스템</span></span>
+                            <h3><span lang="en">LINE Design System 3.0</span><span lang="ko">라인 다크모드 대응 시스템</span></h3>
+                            <p><span lang="en">Scalable unified component library for LINE global services supporting comprehensive dark mode.</span><span lang="ko">수많은 국가에서 쓰이는 라인의 컴포넌트를 통합 및 체계화하고 다크모드 대응을 완성하여 핸드오프 리소스를 단축했습니다.</span></p>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="work-card fade-up" style="transition-delay: 0.1s;">
+                        <img class="work-img" src="images/design_02.jpg" alt="Karrot Chat Experience">
+                        <div class="work-info">
+                            <span class="work-tag"><span lang="en">UX/UI Design</span><span lang="ko">서비스 UX 개편</span></span>
+                            <h3><span lang="en">Karrot Chat Transaction UX</span><span lang="ko">당근마켓 채팅 송금 경험 개선</span></h3>
+                            <p><span lang="en">Seamless negotiation and scheduling interactions to minimize user friction in local transactions.</span><span lang="ko">채팅 내 가격 흥정 인터랙션을 부드럽게 개선하여 이웃 간 중고거래의 마찰을 줄이고 전환율을 끌어올렸습니다.</span></p>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="work-card fade-up" style="transition-delay: 0.2s;">
+                        <img class="work-img" src="images/design_03.jpg" alt="Galaxy S8 AOD">
+                        <div class="work-info">
+                            <span class="work-tag"><span lang="en">Mobile UI</span><span lang="ko">모바일 인터랙션</span></span>
+                            <h3><span lang="en">Galaxy S8 Always On Display</span><span lang="ko">갤럭시 스마트폰 AOD 혁신 설계</span></h3>
+                            <p><span lang="en">Award-winning power-efficient interface design for Samsung's flagship mobile devices.</span><span lang="ko">저전력 환경이라는 제약 속에서 최소한의 픽셀로 심미성을 끌어낸 위젯 배치를 성공적으로 도입했습니다.</span></p>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="work-card fade-up">
+                        <img class="work-img" src="images/design_04.jpg" alt="Smart Home App">
+                        <div class="work-info">
+                            <span class="work-tag"><span lang="en">IoT App</span><span lang="ko">모바일 앱 기획</span></span>
+                            <h3><span lang="en">Smart Home Dashboard</span><span lang="ko">통합 스마트홈 대시보드</span></h3>
+                            <p><span lang="en">A centralized control panel designed for smart home devices with seamless user onboarding.</span><span lang="ko">다양한 스마트 디바이스를 한 번에 제어하고 직관적으로 연결할 수 있는 사용자 중심 대시보드를 통일성 있게 설계했습니다.</span></p>
+                        </div>
+                    </div>
+                    <!-- Project 5 -->
+                    <div class="work-card fade-up" style="transition-delay: 0.1s;">
+                        <img class="work-img" src="images/design_05.jpg" alt="Fintech UX">
+                        <div class="work-info">
+                            <span class="work-tag"><span lang="en">Fintech UX</span><span lang="ko">핀테크 프로덕트</span></span>
+                            <h3><span lang="en">NeoBank Investment App</span><span lang="ko">네오뱅크 간편 투자 앱 UX</span></h3>
+                            <p><span lang="en">Redefined the micro-investment experience for young adults by gamifying the saving process.</span><span lang="ko">MZ세대의 자산 관리에 맞춰 복잡한 소액 투자 과정을 게임화(Gamification)하여 사용자들의 진입장벽을 대폭 낮췄습니다.</span></p>
+                        </div>
+                    </div>
+                    <!-- Project 6 -->
+                    <div class="work-card fade-up" style="transition-delay: 0.2s;">
+                        <img class="work-img" src="images/design_06.jpg" alt="B2B SaaS">
+                        <div class="work-info">
+                            <span class="work-tag"><span lang="en">Web Platform</span><span lang="ko">웹 플랫폼</span></span>
+                            <h3><span lang="en">Data Analytics SaaS</span><span lang="ko">B2B 데이터 분석 SaaS</span></h3>
+                            <p><span lang="en">Comprehensive web platform providing deep analytical insights with customizable data visualization.</span><span lang="ko">방대한 양의 B2B 데이터를 시각적으로 정리하고, 강력한 커스터마이징 차트를 제공해 실무자들의 업무 효율성을 극대화했습니다.</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Tool Stack -->
-            <div class="bento-box tools-card">
-                <h3>사용 도구</h3>
-                <div class="tool-list">
-                    <span>Figma</span>
-                    <span>Sketch</span>
-                    <span>Adobe CC</span>
-                    <span>Framer</span>
-                    <span>ProtoPie</span>
-                    <span>Principle</span>
-                    <span>Notion</span>
-                    <span>Jira</span>
-                    <span>Confluence</span>
-                    <span>Zeplin</span>
-                    <span>Python</span>
-                    <span>After Effects</span>
+        <!-- 4. Capabilities & Awards Section -->
+        <section id="capabilities" class="capabilities section-padding">
+            <div class="container">
+                <div class="cap-layout">
+                    <!-- Skills -->
+                    <div class="cap-col fade-up">
+                        <h2 class="section-title"><span lang="en">Capabilities</span><span lang="ko">상세 역량</span><span class="accent">.</span></h2>
+                        <div class="skills-grid">
+                            <span class="skill-badge"><span lang="en">UI/UX Design</span><span lang="ko">UI/UX 아키텍처</span></span>
+                            <span class="skill-badge"><span lang="en">Design Systems</span><span lang="ko">디자인 시스템 확장</span></span>
+                            <span class="skill-badge"><span lang="en">Prototyping</span><span lang="ko">인터랙션 프로토타이핑</span></span>
+                            <span class="skill-badge"><span lang="en">User Research</span><span lang="ko">사용자 행동 리서치</span></span>
+                            <span class="skill-badge"><span lang="en">Motion Design</span><span lang="ko">고급 모션 디자인</span></span>
+                        </div>
+                        <div class="tools-list">
+                            <h4><span lang="en">Tools</span><span lang="ko">하드 스킬 도구</span></h4>
+                            <p>Figma, Framer, ProtoPie, Principle, Sketch, Adobe CC, Notion, JIRA, Confluence, HTML/CSS</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Awards & Talks -->
+                    <div class="cap-col fade-up" style="transition-delay: 0.1s;">
+                        <h2 class="section-title"><span lang="en">Awards & Talks</span><span lang="ko">어워드 수상 & 외부 강연</span><span class="accent">.</span></h2>
+                        <ul class="award-list">
+                            <li><strong>2024 Good Design Award</strong> &mdash; <span>LINE Design System</span></li>
+                            <li><strong>2023 iF Design Award</strong> &mdash; <span>LINE VOOM</span></li>
+                            <li><strong>2022 Reddot Design Award</strong> &mdash; <span>LINE Gifting</span></li>
+                            <li><strong><span lang="en">Config 2024</span><span lang="ko">피그마 Config 2024</span></strong> &mdash; <span lang="en">Speaker (Figma Korea)</span><span lang="ko">한국 공식 커뮤니티 세션 연사</span></li>
+                            <li><strong>FEConf 2022</strong> &mdash; <span lang="en">Speaker ("When Designers Read Code")</span><span lang="ko">발표 세션 ("디자이너가 코드를 읽으면 생기는 일")</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </section>
 
+        <!-- 5. Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <div class="contact-box fade-up">
+                    <h2 class="contact-title"><span lang="en">Let's build a better system.</span><span lang="ko">아름답게 작동하는 시스템을 만듭니다.</span></h2>
+                    <p class="contact-desc"><span lang="en">Currently open for new collaboration opportunities.</span><span lang="ko">새로운 도전과 협업 기회를 기다리고 있습니다.</span></p>
+                    
+                    <button id="copyEmailBtn" class="copy-email">
+                        minjun.design@gmail.com
+                        <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span class="tooltip"><span lang="en">Click to copy</span><span lang="ko">클릭하여 이메일 주소 복사</span></span>
+                    </button>
+
+                    <div class="social-links">
+                        <a href="https://www.behance.net/minjunhan" target="_blank" class="social-link">Behance</a>
+                        <a href="https://linkedin.com/in/minjunhan" target="_blank" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Minjun Han. All rights reserved.</p>
+            <p class="footer-note"><span lang="en">Designed functionally. Built systematically.</span><span lang="ko">기능적으로 설계하고, 체계적으로 쌓아 올립니다.</span></p>
         </div>
-    </section>
-
-    <!-- Work Section: Projects -->
-    <section class="content" id="work">
-        <h2 class="section-title">SELECTED WORK</h2>
-        <div class="bento-grid work-grid">
-
-            <!-- LINE Design System 3.0 -->
-            <div class="bento-box project-large accent-bg">
-                <div class="project-info">
-                    <span class="project-year">2024</span>
-                    <h3>라인 디자인 시스템 3.0</h3>
-                    <p>구축 리드 · 컴포넌트 240개 체계화 · 다크모드 전면 지원</p>
-                </div>
-                <div class="project-result">
-                    <span class="result-num">50%</span>
-                    <span class="result-label">핸드오프 시간 단축</span>
-                </div>
-            </div>
-
-            <!-- LINE Chat UX Redesign -->
-            <div class="bento-box project-medium">
-                <span class="project-year">2024</span>
-                <h3>라인 메신저 채팅 UX 리디자인</h3>
-                <p>일본/태국/대만 3개국 사용성 테스트</p>
-                <div class="project-result">
-                    <span class="result-num">40%</span>
-                    <span class="result-label">메시지 탐색 시간 단축</span>
-                </div>
-            </div>
-
-            <!-- LINE VOOM -->
-            <div class="bento-box project-medium">
-                <span class="project-year">2023</span>
-                <h3>라인 VOOM 크리에이터 스튜디오</h3>
-                <p>영상 편집 도구 UI · 크리에이터 온보딩 플로우</p>
-                <div class="project-result">
-                    <span class="result-num">35%</span>
-                    <span class="result-label">업로드 완료율 향상</span>
-                </div>
-            </div>
-
-            <!-- LINE AI Assistant -->
-            <div class="bento-box project-small">
-                <span class="project-year">2023</span>
-                <h3>라인 AI 어시스턴트 UI</h3>
-                <p>대화형 AI 인터페이스 · 멀티모달 입출력 UI 패턴</p>
-            </div>
-
-            <!-- LINE Gift -->
-            <div class="bento-box project-medium accent-bg">
-                <span class="project-year">2022</span>
-                <h3>라인 선물하기 글로벌 런칭</h3>
-                <p>일본/태국 현지화 UI 설계</p>
-                <div class="project-result dark-result">
-                    <span class="result-num">22%</span>
-                    <span class="result-label">구매 전환율 향상</span>
-                </div>
-            </div>
-
-            <!-- LINE Pay -->
-            <div class="bento-box project-small">
-                <span class="project-year">2022</span>
-                <h3>라인 Pay 결제 UX 간소화</h3>
-                <p>결제 플로우 5단계 → 3단계 축소 · 생체 인증 연동</p>
-            </div>
-
-            <!-- 당근마켓 Chat -->
-            <div class="bento-box project-medium">
-                <span class="project-year">2021</span>
-                <h3>당근마켓 채팅 거래 경험 개선</h3>
-                <p>가격 제안/약속 잡기 인터랙션</p>
-                <div class="project-result">
-                    <span class="result-num">18%</span>
-                    <span class="result-label">거래 성사율 향상</span>
-                </div>
-            </div>
-
-            <!-- 당근마켓 Feed -->
-            <div class="bento-box project-small">
-                <span class="project-year">2021</span>
-                <h3>당근마켓 동네생활 피드 리디자인</h3>
-                <p>카드형 피드 UI · 게시글 조회율 25% 증가</p>
-            </div>
-
-            <!-- 당근마켓 Biz Profile -->
-            <div class="bento-box project-medium accent-bg">
-                <span class="project-year">2020</span>
-                <h3>당근마켓 비즈프로필</h3>
-                <p>소상공인 프로필 빌더 UI</p>
-                <div class="project-result dark-result">
-                    <span class="result-num">30%</span>
-                    <span class="result-label">사장님 가입 전환율 향상</span>
-                </div>
-            </div>
-
-            <!-- 당근 씨앗 Design System -->
-            <div class="bento-box project-small">
-                <span class="project-year">2020</span>
-                <h3>당근마켓 디자인 시스템 "당근 씨앗"</h3>
-                <p>Figma 컴포넌트 120개 · 디자인 토큰 체계 설계</p>
-            </div>
-
-            <!-- 당근마켓 Search -->
-            <div class="bento-box project-small">
-                <span class="project-year">2019</span>
-                <h3>당근마켓 검색 경험 리디자인</h3>
-                <p>필터 UI · 검색 후 상세 조회율 20% 향상</p>
-            </div>
-
-            <!-- 당근마켓 Full Redesign -->
-            <div class="bento-box project-small">
-                <span class="project-year">2018</span>
-                <h3>당근마켓 앱 전면 리디자인</h3>
-                <p>홈 피드 카드 UI · 하단 네비게이션 · 브랜드 아이덴티티</p>
-            </div>
-
-            <!-- Galaxy S8 AOD -->
-            <div class="bento-box project-medium">
-                <span class="project-year">2017</span>
-                <h3>삼성 갤럭시 S8 AOD UI</h3>
-                <p>시계/알림 위젯 · 저전력 디스플레이 환경 최적화</p>
-            </div>
-
-            <!-- Galaxy Theme Store -->
-            <div class="bento-box project-small">
-                <span class="project-year">2017</span>
-                <h3>삼성 갤럭시 테마스토어 UI 개편</h3>
-                <p>테마 미리보기 및 적용 플로우 개선</p>
-            </div>
-
-            <!-- Galaxy S7 Edge Panel -->
-            <div class="bento-box project-medium">
-                <span class="project-year">2016</span>
-                <h3>삼성 갤럭시 S7 Edge Panel UI</h3>
-                <p>엣지 패널 앱 바로가기 · 한 손 조작 인터랙션 패턴</p>
-            </div>
-
-            <!-- Samsung Pay -->
-            <div class="bento-box project-small">
-                <span class="project-year">2016</span>
-                <h3>삼성페이 카드 등록 UX 개선</h3>
-                <p>OCR 스캔 연동 UI · 에러 핸들링 설계</p>
-            </div>
-
-            <!-- Galaxy S6 Icons -->
-            <div class="bento-box project-small">
-                <span class="project-year">2015</span>
-                <h3>삼성 갤럭시 S6 기본 앱 아이콘</h3>
-                <p>플랫 디자인 전환 · 아이콘 200개 리디자인</p>
-            </div>
-
-            <!-- Studio Joh - Hyundai Card -->
-            <div class="bento-box project-small">
-                <span class="project-year">2014</span>
-                <h3>현대카드 뮤직 라이브러리 공간 그래픽</h3>
-                <p>스튜디오좋 · 사이니지 및 공간 안내 시스템</p>
-            </div>
-
-            <!-- Studio Joh - Innisfree -->
-            <div class="bento-box project-small">
-                <span class="project-year">2014</span>
-                <h3>아모레퍼시픽 이니스프리 패키지</h3>
-                <p>스튜디오좋 · 시즌 한정판 일러스트레이션</p>
-            </div>
-
-            <!-- Studio Joh - Seoul Campaign -->
-            <div class="bento-box project-small">
-                <span class="project-year">2013</span>
-                <h3>서울시 "서울은 꽃이다" 포스터</h3>
-                <p>스튜디오좋 · 타이포그래피 기반 시리즈 4종</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Awards & Talks Section -->
-    <section class="content" id="awards">
-        <h2 class="section-title">AWARDS & TALKS</h2>
-        <div class="bento-grid awards-grid">
-
-            <!-- Awards -->
-            <div class="bento-box awards-card">
-                <h3>수상 실적</h3>
-                <ul class="awards-list">
-                    <li><span class="year">2024</span>Good Design Award (일본) — 라인 디자인 시스템</li>
-                    <li><span class="year">2023</span>iF Communication Design Award — 라인 VOOM</li>
-                    <li><span class="year">2022</span>Red Dot Design Award — 라인 선물하기</li>
-                    <li><span class="year">2021</span>Google Play Best App Design 후보 — 당근마켓</li>
-                    <li><span class="year">2020</span>IDEA Design Award — 당근마켓 앱</li>
-                    <li><span class="year">2019</span>GDA — 당근마켓 UI Design</li>
-                    <li><span class="year">2017</span>iF Design Award — Galaxy S8 AOD</li>
-                    <li><span class="year">2016</span>Red Dot Design Award — Galaxy S7 Edge Panel</li>
-                </ul>
-            </div>
-
-            <!-- Talks -->
-            <div class="bento-box talks-card">
-                <h3>강연 및 활동</h3>
-                <ul class="talks-list">
-                    <li><span class="year">2024</span>Config (Figma 컨퍼런스) 한국 커뮤니티 세션 연사</li>
-                    <li><span class="year">2023</span>디자인 스펙트럼 — "디자인 시스템, 만들기보다 지키기가 어렵다"</li>
-                    <li><span class="year">2022</span>FEConf — "디자이너가 코드를 읽으면 생기는 일"</li>
-                    <li><span class="year">2021</span>UXCAMP Seoul — "당근마켓 로컬 서비스 디자인"</li>
-                    <li><span class="year">2020</span>디자인 나침반 멘토 (주니어 디자이너 멘토링)</li>
-                    <li><span class="year">2019</span>노트폴리오 인터뷰 — "프로덕트 디자이너로 성장하기"</li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="content" id="contact">
-        <h2 class="section-title">CONTACT</h2>
-        <div class="bento-grid contact-grid">
-
-            <div class="bento-box contact-card-main">
-                <h3>Let's Talk</h3>
-                <a href="mailto:minjun.design@gmail.com" class="email-link">minjun.design@gmail.com</a>
-                <p class="phone">010-5561-7742</p>
-            </div>
-
-            <div class="bento-box social-card">
-                <h3>Social</h3>
-                <div class="social-links">
-                    <a href="https://www.behance.net/minjunhan" target="_blank">Behance ↗</a>
-                    <a href="https://linkedin.com/in/minjunhan" target="_blank">LinkedIn ↗</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Minjun Han. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
-
 </html>
